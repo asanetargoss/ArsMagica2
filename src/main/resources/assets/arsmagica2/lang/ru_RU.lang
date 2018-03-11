@@ -13,8 +13,7 @@ affinity.ender=Край
 
 fluid.liquid_essence=Жидкий эфир
 
-#Item Names
-
+#region Item names
 item.arsmagica2:tome.name=§eТом родства: %s§f
 item.arsmagica2:essence.name=Эссенция %s
 item.arsmagica2:ore.vinteum.name=Винтеумная пыль
@@ -157,8 +156,9 @@ item.arsmagica2:bound_shovel.name=Связанная лопата
 item.arsmagica2:bound_sword.name=Связанный меч
 item.arsmagica2:bound_bow.name=Связанный лук
 item.arsmagica2:bound_shield.name=Связанный щит
+#endregion
 
-#Block Names
+#region Block names
 tile.arsmagica2:frost.name=Мороз
 tile.arsmagica2:desert_nova.name=Пустынная звездка
 tile.arsmagica2:magic_wall.name=Магическая стена
@@ -230,7 +230,9 @@ tile.arsmagica2:astral_barrier.name=Астральный барьер
 tile.arsmagica2:mana_drain.name=Иссушатель маны
 tile.arsmagica2:witchwood_slab.name=Плита из ведьминого дерева
 tile.arsmagica2:fluid_block_liquid_essence=Жидкая эссенция
+#endregion
 
+#region Mobs
 entity.arsmagica2.DarkMage.name=Темный маг
 entity.arsmagica2.Dryad.name=Дриада
 entity.arsmagica2.EarthElemental.name=Земляной элементаль
@@ -254,6 +256,7 @@ entity.arsmagica2.EnderGuardian.name=Хранитель края
 entity.arsmagica2.NatureGuardian.name=Хранитель природы
 entity.arsmagica2.FireGuardian.name=Хранитель огня
 entity.arsmagica2.AirGuardian.name=Хранитель воздуха
+#endregion
 
 itemGroup.am2.blocks=Ars Magica 2 Блоки
 itemGroup.am2.items=Ars Magica 2 Предметы
@@ -293,6 +296,7 @@ am2.npc.partyjoin=Я буду защищать твою спину!
 am2.npc.partyleave=Удачи, друг.
 am2.npc.partyrefuse=Ты слишком слаб, приходи ко мне когда станешь сильнее.
 
+#region Affinity
 ##air
 affinityability.agile.name=Подвижность (высокий прыжок)
 affinityability.lightasafeather.name=Легкий как перышко (слабость к дождю)
@@ -348,8 +352,9 @@ affinityability.lightningstep.name=Молниеносный шаг (автопо
 affinityability.shortcircuit.name=Короткое замыкание (потеря маны при дожде или в воде)
 affinityability.thunderpunch.name=Грозовой кулак (удар молнией в существ голыми руками)
 affinityability.waterweakness_lightning.name=Слабость к воде (см. Короткое замыкание)
+#endregion
 
-#Rituals
+#region Rituals
 ritual.arsmagica2:absorption.name=Ритуал продолжительности
 ritual.arsmagica2:astral_distortion.name=Ритуал искажения
 ritual.arsmagica2:banish_rain.name=Ритуал подавления дождя
@@ -385,7 +390,9 @@ ritualshape.corruption.name=Искажение
 ritualshape.celestialPurification.name=Очищение небесной призмы
 ritualshape.purification.name=Очищение
 ritualshape.ringedCross.name=Круговой крест
+#endregion
 
+#region Skills
 skill.arsmagica2:projectile.name=Снаряд
 skill.arsmagica2:bounce.name=Отскок
 skill.arsmagica2:gravity.name=Гравитация
@@ -647,7 +654,9 @@ skill.arsmagica2:spell_motion.occulusdesc=Мобильная магия
 skill.arsmagica2:shield_overload.occulusdesc=Слишком много маны? Ну, это всегда хороший щит...
 skill.arsmagica2:augmented_casting.occulusdesc=Улучшенная магия.
 skill.arsmagica2:affinity_gains.occulusdesc=Давай пропустим все до той части, где у меня уже есть суперсилы.
+#endregion
 
+#region Potions
 arsmagica2:agility=Подвижность
 arsmagica2:astral_distortion=Астральное искажение
 arsmagica2:burnout_reduction=Снижение выгорания
@@ -685,7 +694,9 @@ potion.potency.5=VI
 potion.potency.6=VII
 potion.potency.7=VIII
 potion.potency.8=IX
+#endregion
 
+#region Gui
 am2.tooltip.air_sled=§3Летите по воздуху с максимальной легкостью...§f
 am2.tooltip.approError=Что-то пошло не так при восстановлении блока. Скорее всего это заклинание со старой версии. Блок был удален для того, чтобы избежать ошибок. Извините!
 am2.tooltip.arcanespellbook=§3Получите мощь древних магов.§f
@@ -924,9 +935,9 @@ am2.chat.enabled=§aВключено
 am2.chat.disabled=§cОтключено
 am2.chat.ability_ice_bridge=§bЛедяные шаги
 am2.chat.ability_night_vision=§dТемное зрение
+#endregion
 
-#Components
-
+#region Components
 compendium.category.component.name=Компоненты
 
 compendium.component.absorption.name=Поглощение
@@ -1085,9 +1096,9 @@ compendium.true_sight.page1=Ваше магическое зрение позв�
 compendium.water_breathing.page1=Вашей магии достаточно, чтобы вытащить кислород с воды. Этого вполне хватит, чтоб не утонуть.
 compendium.watery_grave.page1=Казалось, что вода ожила и она затягивала мага глубоко к темному дну. Его друг стоял на берегу и лишь беспомощно смотрел, ведь прыжок в воду означал такую же участь и для него.
 compendium.wizards_autumn.page1=Вы научились фокусировать Вашу магию копания в небольшом радиусе, который непосредственно влияет на листву. Это заклинание имеет встроенный AoE, который может быть улучшен модификатором радиуса. Вы можете использовать это заклинание для того, чтобы очищать эти надоедливые недостижимые блоки листвы.
+#endregion
 
-#Shapes
-
+#region Shapes
 compendium.category.shape.name=Формы
 
 compendium.shape.projectile.name=Снаряд
@@ -1127,9 +1138,9 @@ compendium.binding.page1=Вы можете создавать твердые о�
 compendium.wall.page1=Вы можете изобразить стену перед собой. Стена будет проходить перпендикулярно к Вашему направлению взгляда. Стены функционируют аналогично зонам, но с другим форм-фактором. Стены также применяют свой эффект намного быстрее.
 compendium.wave.page1=Запустите волну из магии перед собой в направлении Вашего взгляда, которая будет применять свой эффект ко всему на своем пути.
 compendium.toggle.page1=Заставьте Ваше заклинание автоматически повторять свое чтение! Вы не можете иметь несколько таких заклинаний, сразу же убедитесь, что для него будет какое-либо применение...
+#endregion
 
-#Modifiers
-
+#region Modifiers
 compendium.category.modifier.name=Модификаторы
 
 compendium.modifier.gravity.name=Гравитация
@@ -1173,9 +1184,9 @@ compendium.buff_power.page1=Вы можете вложить больше мощ
 compendium.dismembering.page1=Вы решили, что вы любите сувениры. Настолько, что вы открываете способ заставить Ваши атакующие заклинания оставлять целыми некоторые части. Каждый модификатор добавляет 5% шанс выпадения головы поверженного противника.
 compendium.feather_touch.page1=С большой силой ломаются ценные вещи. Вы становитесь более аккуратными при использовании копательных заклинаний и ломаете вещи намного реже. Каждый модификатор эквивалентен одному уровню шелкового касания на заклинании.
 compendium.colour.page1=Этот модификатор позволит Вам изменить цвет частиц на Вашем заклинании. Хотите зеленые огненные шары? Получите их! Цвет определяется красителем, что вы бросите при создании заклинания. Любой краситель будет принят не смотря на то, что просит Аналой.
+#endregion
 
-#Talents
-
+#region Talents
 compendium.category.talent.name=Таланты
 
 compendium.talent.affinity_gains.name=Ускорение набора родства
@@ -1197,9 +1208,9 @@ compendium.mana_regen_i.page1=Вы больше настроены на энер
 compendium.mana_regen_ii.page1=Вы больше настроены на энергию, проходящую через Вас. Ваша мана восстанавливается быстрее, чем обычно. Это заменяет бонус Ускорение регенерации маны I.
 compendium.mana_regen_iii.page1=Вы больше настроены на энергию, проходящую через Вас. Ваша мана восстанавливается намного быстрее, чем обычно. Это заменяет бонус Ускорение регенерации маны II.
 compendium.spell_motion.page1=Вы поняли, что маневренность очень важна при чтении заклинаний. С этой целью Вы научились передвигаться с нормальной скоростью при чтении
+#endregion
 
-#Guides
-
+#region Guides
 compendium.category.guide.name=Гайды
 
 compendium.guide.your_first_spell.name=Ваше первое заклинание
@@ -1208,9 +1219,9 @@ compendium.your_first_spell.page2=Стол имеет три секции. Св�
 compendium.your_first_spell.page3=Создайте #5Группу форм#0 путем перетаскивания форм и/или модификаторов из верхнего региона в любую группу форм. Вы можете создавать несколько групп форм в одном заклинании, 3 по умолчанию. Каждая форма групп может иметь до 4-х форм/модификаторов. Группы форм не могут содержать компоненты. Лучше всего представить группы форм как различные способы нацеливания заклинаний, а грамматику заклинаний как то, что на самом деле делают заклинания.
 compendium.your_first_spell.page4=Когда необходимые группы форм будут готовы, перетащите части заклинания в нужном порядке в регион грамматики заклинания. Регион грамматики заклинания может содержать формы, компоненты и модификаторы в дополнение к группам форм. Когда Ваша комбинация заклинания будет готова, подойдите к #5алтарю создания#0 и положите Вашу книгу с рецептом заклинания на Аналой.
 compendium.your_first_spell.page5=Бросьте #5пустую руну#0 в центр алтаря создания, чтобы начать процесс и далее следуйте запросам книги. Саму книгу тоже стоит прочесть, т.к. она содержит краткое описание того, что из себя представляет рецепт заклинания, список материалов для заклинания и привязанность заклинания к родству. Обратите внимание, что не все алтари создания могут создавать мощные заклинания, состоящие из множества частей. С большей силой приходят плохие вещи. Смотрите запись #5Алтарь создания#0 для большей информации.
+#endregion
 
-#Mechanics
-
+#region Mechanics
 compendium.category.mechanic.name=Механика
 compendium.category.mechanic.affinity.name=Родство
 compendium.category.mechanic.enchants.name=Зачарования
@@ -1238,7 +1249,7 @@ compendium.mechanic.affinity.life_affinity.name=Жизнь
 compendium.mechanic.affinity.arcane_affinity.name=Магия
 compendium.mechanic.affinity.ender_affinity.name=Край
 
-compendium.mechanic.enchants.magic_resist.name=Зачарование: Защита от магии
+compendium.mechanic.enchants.magic_resistance.name=Зачарование: Защита от магии
 compendium.mechanic.enchants.soulbound.name=Зачарование: Привязка к душе
 
 compendium.affinities.page1=#5Affinity#0 represents a bond to certain areas of magic. You start with no affinity. Your affinity is represented as a small chart on the HUD, and can be viewed in more detail at an Occulus (craftable Block). 
@@ -1352,9 +1363,9 @@ compendium.crafting_altar_structure.page1=Harnessing the forces of creation, the
 compendium.crafting_altar_structure.page2=These stack cumulatively, so for example wood planks with glass caps would equal a maximum of 2 effects, whereas stone bricks with redstone caps would have a maximum of 4 effects in a spell.
 compendium.gateway.page1=Gateways are quite efficient at short range, but longer distances require significantly more Etherium. The maximum range for a Gateway has been tested to be roughly 12km, though an extreme amount of Etherium is required to traverse such a span. A keystone can be inserted into the Keystone Receptacle in order to lock the gateway to the keystone's rune combination.
 compendium.gateway.page2=Only then by activating another gateway with a matching keystone can one arrive at the keyed gateway. If the key does not match or no keystone is held at all when the gate is activated, it will be as if the keyed gateway doesn't even exist. This method can be used to control where you will wind up in the gateway network.
+#endregions
 
-#Blocks
-
+#region Blocks
 compendium.category.block.name=Блоки
 compendium.category.block.illusionblocks.name=Блоки иллюзий
 compendium.category.block.crystalmarker.name=Кристальный маркер
@@ -1445,7 +1456,7 @@ compendium.redstone_inlay.page1=Redstone inlays are the most basic of inlay. The
 compendium.iron_inlay.page1=Iron inlays are an intermediate inlay. They are used to summon bosses, and can also be used as rails. When a minecart touches an iron inlay, it will reverse direction. Some of the momentum is preserved, but not all.
 compendium.gold_inlay.page1=Gold inlays are the most advanced inlay. They are used to summon the most powerful of bosses. They can also be used as rails. When a minecart touches a gold inlay, it will attempt to warp to the next gold inlay in the direction it is currently traveling within 8 blocks. This can transport the minecart (and any passengers) through solid obstacles, as it is in fact teleportation. There is a short delay before the minecart can teleport on a gold rail again after it warps.
 
-compendium.block.keystone_doors.name=Keystone Doors
+compendium.block.keystone_doors.name=Двери ключевого камня
 
 compendium.keystone_doors.page1=Keystone Doors can be locked using a rune combination. If locked, they will only open if you have a keystone with the matching key in your inventory. If not locked, they function simply as a door. Zombies cannot break them down either way.
 
@@ -1470,9 +1481,9 @@ compendium.crystal_marker_regulate_bidirectional.page1=This crystal instructs th
 compendium.crystal_marker_set_import.page1=This crystal instructs the flickers that they may import items into the item transportation network from the inventory this crystal is attached to so long as the item has been added to this crystal's GUI.
 compendium.crystal_marker_final_export.page1=This crystal instructs the flickers that they should put any items that can't otherwise be placed in the inventory marked by this crystal. These crystals always have the highest priority number, meaning items will be placed there last.
 compendium.crystal_marker_spell_export.page1=This crystal instructs the flickers to watch any crafting altar within 10 blocks. If it is crafting a spell, the flickers will attempt to fetch the next item required for the spell and place it in the inventory marked by this crystal.
+#endregion
 
-#Items
-
+#region Items
 compendium.category.item.name=Предметы
 compendium.category.item.ore.name=Руды Ars Magica
 compendium.category.item.essence.name=Эссенции
@@ -1489,10 +1500,10 @@ compendium.item.keystone.name=Ключевой камень
 compendium.item.mana_cake.name=Торт маны
 compendium.item.crystal_wrench.name=Кристальный ключ
 compendium.item.spell_parchment.name=Пергамент заклинания
-compendium.item.crystal_phylactery.name=Crystal Phylactery
+compendium.item.crystal_phylactery.name=Кристальный талисман
 compendium.item.spell_staff_magitech.name=Посох техномага
 compendium.item.spell_book.name=Книга заклинаний
-compendium.item.magic_broom.name=Broom
+compendium.item.magic_broom.name=Магическая метла
 compendium.item.nature_scythe.name=Коса природы
 compendium.item.arcane_spellbook.name=Тайная книга заклинаний
 compendium.item.winter_arm.name=Хватка зимы
@@ -1504,7 +1515,7 @@ compendium.item.workbench_upgrade.name=Улучшение сетки верст�
 compendium.item.warding_candle.name=Свеча оберега
 compendium.item.flicker_jar.name=Банка со светлячком
 compendium.item.ender_boots.name=Боты края
-compendium.item.lightning_charm.name=Lightning Charm
+compendium.item.lightning_charm.name=Талисман молний
 compendium.item.lifeward.name=Оберег жизни
 compendium.item.magitech_goggles.name=Очки техномага
 compendium.item.chalk.name=Магический мел
@@ -1744,9 +1755,9 @@ compendium.item.inscription_upgrades.inscription_tier_2_upgrade.name=Tier 2 Upgr
 compendium.item.inscription_upgrades.inscription_tier_3_upgrade.name=Tier 3 Upgrade
 
 compendium.inscription_upgrades.page1=These upgrades improve the functionality of your #9Inscription Table#0, allowing you to make use of more shape groups.
+#endregion
 
-#Mobs
-
+#region Mobs
 compendium.category.mob.name=Мобы
 compendium.category.mob.flicker.name=Светлячки
 
@@ -1798,9 +1809,9 @@ compendium.ice_flicker.page1=#5Ice Flickers#0 can be found in frozen areas, such
 compendium.arcane_flicker.page1=#5Arcane Flickers#0 can be found in magical areas. They very much like Witchwood Forests.
 compendium.life_flicker.page1=#5Life Flickers#0 can be found anywhere. Any flicker spawning has a small chance to be a life flicker rather than whatever else it could be.
 compendium.ender_flicker.page1=#5Ender Flickers#0 are found in the end. Occasionally, a teleporting Enderman can open a rift large enough for Ender Flickers to slip through.
+#endregion
 
-#Bosses
-
+#region Bosses
 compendium.category.boss.name=Боссы
 
 compendium.boss.air_guardian.name=Хранитель Воздуха
@@ -1836,6 +1847,7 @@ compendium.water_guardian.page1=The guardian of water is a unique being. It is a
 compendium.water_guardian.page2=The water guardian can be summoned by creating a redstone inlay circle in any biome that is predominantly water. Then, while raining, throw a boat and a bucket of water into the circle as homage to the many ships lost at sea. 
 compendium.winter_guardian.page1=The Winter Guardian is truly the embodiment of it's namesake. Surrounded by frigid winds that sap the strength of all who near it, the Winter Guardian pummels its frozen foes and shatters them with powerful strikes.
 compendium.winter_guardian.page2=To summon the Winter Guardian, seek out an area in the grips of winter. Place a gold inlay circle on the ground and build an effigy to the Winter Guardian in the centre, Ice on top of two Blue Topaz blocks. Then create 3 snow golems close by to fuel the summoning. !d Warning: !l This is a very difficult boss that can take down even the most well geared players.
+#endregion
 
 # JEI
 am2.essence_refiner=Очиститель эссенции
