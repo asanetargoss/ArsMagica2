@@ -1493,7 +1493,7 @@ compendium.category.item.affinity_tomes.name=Томы родства
 compendium.category.item.foci.name=Фокусы
 compendium.category.item.mana_potion.name=Зелья маны
 compendium.category.item.binding_catalyst.name=Катализаторы связывания
-compendium.category.item.flickerfocus.name=Фокусы светлячков
+compendium.category.item.flickerfocus.name=Светлячковый фокус
 compendium.category.item.inscription_upgrades.name=Улучшения стола начертания
 
 compendium.item.keystone.name=Ключевой камень
@@ -1653,69 +1653,69 @@ compendium.item.affinity_tomes.tome_lightning.name=Том родства: Мол
 compendium.item.affinity_tomes.tome_life.name=Том родства: Жизнь
 compendium.item.affinity_tomes.tome_ender.name=Том родства: Край
 
-compendium.affinity_tome.page1=Affinity tomes contain detailed reports and information gather by magi over the years pertaining to a specific affinity. With the exception of the General affinity tome, they will, when read, give you a 20% boost to that specific affinity, while simultaneously reducing your progress in all other affinities by 5/10/15% depending on the opposition.
-compendium.tome_none.page1=The general affinity tome is special in that it can unlock a locked affinity state. It will reduce all affinity progression by 20% without boosting any of them.
+compendium.affinity_tome.page1=Томы родства содержат большое количество информации, собираемой магами разных стихий в течении многих лет. За исключением пустого тома, все они будут давать вам после прочтения 20%-ное повышение родства со стихией тома. А также будут снижать прогресс родства со всеми другими стихиями на 5/10/15% в зависимости от противоположности этой стихии.
+compendium.tome_none.page1=Пустой том родства - это специальный том, который может разблокировать заблокированное родство. Он уменьшит прогресс родства с каждой стихией на 20% без усиления какой-либо из них.
 
 ##Foci
 
 compendium.item.foci.foci.name=Фокусы
-compendium.item.foci.charge_focus.name=Charge Focus
+compendium.item.foci.charge_focus.name=Фокус на энергию
 compendium.item.foci.mana_focus.name=Mana Focus
-compendium.item.foci.lesser_focus.name=Lesser Focus
-compendium.item.foci.standard_focus.name=Standard Focus
-compendium.item.foci.greater_focus.name=Greater Focus
-compendium.item.foci.item_focus.name=Item Focus
-compendium.item.foci.player_focus.name=Player Focus
-compendium.item.foci.monster_focus.name=Monster Focus
-compendium.item.foci.creature_focus.name=Creature Focus
+compendium.item.foci.lesser_focus.name=Малый фокус
+compendium.item.foci.standard_focus.name=Обычный фокус
+compendium.item.foci.greater_focus.name=Большой фокус
+compendium.item.foci.item_focus.name=Фокус на предмет
+compendium.item.foci.player_focus.name=Фокус на игрока
+compendium.item.foci.monster_focus.name=Фокус на монстра
+compendium.item.foci.creature_focus.name=Фокус на существ
 
-compendium.foci.page1=Foci are used inside specific Ars Magica machines to change the way they function.
-compendium.charge_focus.page1=Charge Foci are used to increase the rate at which Ars Magica machines charge. In #9Calefactors#0 and #9Arcane Reconstructors#0, they also increase the rate at which the machine performs its task.
-compendium.mana_focus.page1=Mana Foci are used to decrease costs of operation in Ars Magica machines.
-compendium.lesser_focus.page1=Lesser Foci are used in various AM2 machines, and instruct them to operate in different ways.
-compendium.standard_focus.page1=Standard Foci are used in various AM2 machines, and instruct them to operate in different ways.
-compendium.greater_focus.page1=Greater Foci are used in various AM2 machines, and instruct them to operate in different ways.
-compendium.item_focus.page1=Item foci are used in the #9Seer Stone#0, and instruct it to search for nearby items on the ground.
-compendium.player_focus.page1=Player foci are used in the #9Seer Stone#0, and instruct it to search for nearby players.
-compendium.monster_focus.page1=Monster foci are used in the #9Seer Stone#0, and instruct it to search for nearby mobs (Zombies, Skeletons, etc).
-compendium.creature_focus.page1=Creature foci are used in the #9Seer Stone#0, and instruct it to search for nearby critters (Sheep, Cows, etc).
+compendium.foci.page1=Фокусы в Ars Magica используются в устройствах для того, чтобы изменять их функциональность.
+compendium.charge_focus.page1=Фокус на энергию используется для того, чтобы увеличивать скорость зарядки устройств Ars Magica. При использовании в #9печке#0 и #9тайном реконструкторе#0 будет увеличена также их скорость работы.
+compendium.mana_focus.page1=Фокус на ману используется для того, чтобы уменьшить стоимость операций устройств Ars Magica.
+compendium.lesser_focus.page1=Малый фокус используется в различных устройствах AM2 и заставляет их работать по-разному.
+compendium.standard_focus.page1=Обычный фокус используется в различных устройствах AM2 и заставляет их работать по-разному.
+compendium.greater_focus.page1=Большой фокус используется в различных устройствах AM2 и заставляет их работать по-разному.
+compendium.item_focus.page1=Фокус на предметы исполльзуется в #9камне ясновидения#0, и заставляет его искать близлежайшие предметы на земле.
+compendium.player_focus.page1=Фокус на игрока исполльзуется в #9камне ясновидения#0, и заставляет его искать ближайших игроков.
+compendium.monster_focus.page1=Фокус на монстра исполльзуется в #9камне ясновидения#0, и заставляет его искать ближайших монстров (Зомби, Скелет и т.д.).
+compendium.creature_focus.page1=Фокус на существ исполльзуется в #9камне ясновидения#0, и заставляет его искать ближайших существ (Овцы, Коровы и т.д.).
 
 ##Mana Potions
 
 compendium.item.mana_potion.mana_potion.name=Зелья маны
-compendium.item.mana_potion.mana_potion_lesser.name=Lesser Mana Potion
-compendium.item.mana_potion.mana_potion_standard.name=Standard Mana Potion
-compendium.item.mana_potion.mana_potion_greater.name=Greater Mana Potion
-compendium.item.mana_potion.mana_potion_epic.name=Epic Mana Potion
-compendium.item.mana_potion.mana_potion_legendary.name=Legendary Mana Potion
-compendium.item.mana_potion.mana_boost_potion.name=Infused Etherium Potion
-compendium.item.mana_potion.mana_martini.name=Mana Martini
+compendium.item.mana_potion.mana_potion_lesser.name=Малое зелье маны
+compendium.item.mana_potion.mana_potion_standard.name=Обычное зелье маны
+compendium.item.mana_potion.mana_potion_greater.name=Большое зелье маны
+compendium.item.mana_potion.mana_potion_epic.name=Эпичное зелье маны
+compendium.item.mana_potion.mana_potion_legendary.name=Легендарное зелье маны
+compendium.item.mana_potion.mana_boost_potion.name=Эфирное зелье
+compendium.item.mana_potion.mana_martini.name=Мартини маны
 
-compendium.mana_potion.page1=Mana potions restore mana instantly when imbibed. You get an empty bottle back after drinking one. Mana potions can be bundled by combining 3 of the same type of potion with string. The bundle can be used 3 times and will also return the empty bottles. The final potion drank will also return the string.
-compendium.mana_potion_lesser.page1=The lesser mana potion is the magical equivalent to a cup of coffee: a short boost, but it won't get you through an entire day. One use will restore 100 mana.
-compendium.mana_potion_standard.page1=The standard mana potion gives a decently upgraded amount of mana from the lesser one for not much of a material cost. One use will restore 250 mana.
-compendium.mana_potion_greater.page1=The greater mana potion uses the power of #5vinteum#0 combined with a #9Awkward Potion#0 at a brewing stand to restore a good amount of mana. One use will restore 2000 mana.
-compendium.mana_potion_epic.page1=The epic mana potion is created by combining #5arcane ash#0 with a #9Awkward Potion#0 at a brewing stand to restore 5000 mana per potion.
-compendium.mana_potion_legendary.page1=The legendary mana potion is created by combining #5purified vinteum dust#0 with a #9Awkward Potion#0 at a brewing stand. One potion will restore a whopping 10000 mana!
-compendium.mana_boost_potion.page1=By taking a #5bucket of Liquid Etherium#0, a mage can combine it with #5chimerite#0 and #5tarma root#0 in order to create a potion to give a temporary boost to maximum mana. Unfortunately, the process is minimally efficient and much of the Liquid Etherium is lost along the way.
-compendium.mana_martini.page1=In honour of Mithion's final release of AM2, which happens to be #9version 007#0, you can now make a Mana Martini that, when drank, will give you a 25% reduction in burnout gained from casting spells.
+compendium.mana_potion.page1=Зелья маны восстанавливают ману мгновенно при использовании. После использования вы получите назад пустые пузырьки. Кроме того, 3 зелья можно соединить в связку с помощью нитки. Связка может использоваться 3 раза и также вернет по пузырьку за каждое выпитое зелье, а после последнего ещё и нитку.
+compendium.mana_potion_lesser.page1=Малое зелье маны - это магический эквивалент к кружке кофе: короткий заряд силы, который не продержится на весь день. При использовании восстанавливает 100 маны.
+compendium.mana_potion_standard.page1=Обычное зелье маны восстанавливает приличное количество маны в сравнении с малым зельем за не очень большую материальную стоимость. При использовании восстанавливает 250 маны.
+compendium.mana_potion_greater.page1=Большое зелье маны использует силу #5винтеума#0 в сочетании с #9Неловким зельем#0 на варочной стойке, чтобы восстановить значительное количество маны. При использовании восстанавливает 2000 маны.
+compendium.mana_potion_epic.page1=Эпичное зелье маны создается путем смешивания #5тайного пепла#0 с #9Неловким зельем#0 на варочной стойке и восстанавливает 5000 маны за зелье.
+compendium.mana_potion_legendary.page1=Легендарное зелье маны создается путем смешивания #5очищенной винтеумной пыли#0 с #9Неловким зельем#0 на варочной стойке. Одно зелье будет восстанавливать чудовищные 10000 маны!
+compendium.mana_boost_potion.page1=Взяв #5ведро жидкого эфира#0 и смешав его с #5химеритом#0 и #5корнем тармы#0, маг может создать зелье, дающее временное увеличение максимального количества маны. К сожалению, процесс очень не эффективный и большая часть жидкого эфира теряется.
+compendium.mana_martini.page1=В честь финального релиза AM2 от Mithion, #9версия которого равна 007#0, вы теперь можете создавать мартини маны. При использовании оно даст вам 25%-ное снижение выгорания при использовании заклинаний.
 
 ##Binding Catalysts
 
 compendium.item.binding_catalyst.binding_catalysts.name=Катализаторы связывания
-compendium.item.binding_catalyst.binding_catalyst_pickaxe.name=Binding Catalyst: Pickaxe
-compendium.item.binding_catalyst.binding_catalyst_axe.name=Binding Catalyst: Axe
-compendium.item.binding_catalyst.binding_catalyst_sword.name=Binding Catalyst: Sword
-compendium.item.binding_catalyst.binding_catalyst_shovel.name=Binding Catalyst: Shovel
-compendium.item.binding_catalyst.binding_catalyst_hoe.name=Binding Catalyst: Hoe
-compendium.item.binding_catalyst.binding_catalyst_bow.name=Binding Catalyst: Bow
-compendium.item.binding_catalyst.binding_catalyst_shield.name=Binding Catalyst: Shield
+compendium.item.binding_catalyst.binding_catalyst_pickaxe.name=Катализатор связывания: Кирка
+compendium.item.binding_catalyst.binding_catalyst_axe.name=Катализатор связывания: Топор
+compendium.item.binding_catalyst.binding_catalyst_sword.name=Катализатор связывания: Меч
+compendium.item.binding_catalyst.binding_catalyst_shovel.name=Катализатор связывания: Лопата
+compendium.item.binding_catalyst.binding_catalyst_hoe.name=Катализатор связывания: Мотыга
+compendium.item.binding_catalyst.binding_catalyst_bow.name=Катализатор связывания: Лук
+compendium.item.binding_catalyst.binding_catalyst_shield.name=Катализатор связывания: Щит
 
-compendium.binding_catalysts.page1=Binding Catalysts are used by the #5Binding#0 shape to determine what type of tool or weapon will be bound.
+compendium.binding_catalysts.page1=Катализаторы связывания используются формой #5Привязка#0 для того, чтобы определять тип инструмента, который будет привязываться.
 
 ##Flicker Focus
 
-compendium.item.flickerfocus.flicker_focus.name=Flicker Focus
+compendium.item.flickerfocus.flicker_focus.name=Светлячковый фокус
 compendium.item.flickerfocus.flicker_focus_itemtransport.name=Flicker Focus: Item Transport
 compendium.item.flickerfocus.flicker_focus_interdiction.name=Flicker Focus: Interdiction
 compendium.item.flickerfocus.flicker_focus_containment.name=Flicker Focus: Containment
@@ -1749,12 +1749,12 @@ compendium.flicker_focus_fishing.page2=The focus requires a 3x3 square of water 
 
 ##Inscription Upgrades
 
-compendium.item.inscription_upgrades.inscription_upgrades.name=Inscription Table Upgrades
-compendium.item.inscription_upgrades.inscription_tier_1_upgrade.name=Tier 1 Upgrade
-compendium.item.inscription_upgrades.inscription_tier_2_upgrade.name=Tier 2 Upgrade
-compendium.item.inscription_upgrades.inscription_tier_3_upgrade.name=Tier 3 Upgrade
+compendium.item.inscription_upgrades.inscription_upgrades.name=Улучшения стола начертания
+compendium.item.inscription_upgrades.inscription_tier_1_upgrade.name=Улучшение стола начертания 1 уровня
+compendium.item.inscription_upgrades.inscription_tier_2_upgrade.name=Улучшение стола начертания 2 уровня
+compendium.item.inscription_upgrades.inscription_tier_3_upgrade.name=Улучшение стола начертания 3 уровня
 
-compendium.inscription_upgrades.page1=These upgrades improve the functionality of your #9Inscription Table#0, allowing you to make use of more shape groups.
+compendium.inscription_upgrades.page1=Эти улучшения расширяют #9Стол начертания#0, увеличивая число групп форм, которые вы можете использовать.
 #endregion
 
 #region Mobs
@@ -1853,6 +1853,6 @@ compendium.winter_guardian.page2=To summon the Winter Guardian, seek out an area
 am2.essence_refiner=Очиститель эссенции
 
 # Ritual shapes
-compendium.shape.hourglass.page1=Представляет собой две окружности, исходящих из креста. В основном используется для увеличения продолжительности заклинаний
+compendium.shape.hourglass.page1=Представляет собой две окружности, исходящие из креста (в виде восьмерки). В основном используется для увеличения продолжительности заклинаний
 compendium.shape.corruption.page1=Ритуал искажения. Искажает целевые объекты, превращая обелиски в темные ауремы и т.д.
 compendium.shape.celestialPurification.page1=Ритуал очищения небесной призмы. Превращает обелиск в небесную призму путем очищения
