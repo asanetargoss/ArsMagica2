@@ -1815,18 +1815,18 @@ compendium.mob.flicker.arcane_flicker.name=Светлячок магии
 compendium.mob.flicker.life_flicker.name=Светлячок жизни
 compendium.mob.flicker.ender_flicker.name=Светлячок края
 
-compendium.flickers.page1=Flickers are lesser elementals from the various elemental planes that have crossed over into our world. Their magical bond is tenuous at best and they are known for "Flicking" back and forth between their plane and ours. They are the starting point for #5Ars Magica Automation#0. !d Flickers are timid by nature and will flick back to their own dimension if attacked, or if they feel threatened. Giving them a modicum of magic in the form of #5some sort of lasting effect#0 makes them feel more comfortable and less likely to run away. #5Flickers can be captured inside of a Flicker Jar#0.
-compendium.flickers.page2=There is one type of flicker for each affinity. Flickers of each affinity will behave differently. For example, Air Flickers tend to like to stay higher above the ground, while Earth Flickers will prefer to stay low. !d Flickers of each affinity can be found near regions of the world that remind them of their affinity.
-compendium.water_flicker.page1=5Water Flickers#0 will be found in areas that are predominantly water, like swmaps, rivers, and oceans.
-compendium.air_flicker.page1=#5Air Flickers#0 can be found anywhere not underground, and will fly around higher in the sky (~25 blocks above the ground).
-compendium.earth_flicker.page1=#5Earth Flickers#0 can be found anywhere, but they prefer underground locations. They will stay close to the ground.
-compendium.fire_flicker.page1=#5Fire Flickers#0 can be found in the nether..
-compendium.lightning_flicker.page1=#5Lightning Flickers#0 can be found on beaches and over oceans in the sky, where storms like to form. They can be found in all areas if it is storming.
-compendium.nature_flicker.page1=#5Nature Flickers#0 can be found in forests.
-compendium.ice_flicker.page1=#5Ice Flickers#0 can be found in frozen areas, such as Taiga.
-compendium.arcane_flicker.page1=#5Arcane Flickers#0 can be found in magical areas. They very much like Witchwood Forests.
-compendium.life_flicker.page1=#5Life Flickers#0 can be found anywhere. Any flicker spawning has a small chance to be a life flicker rather than whatever else it could be.
-compendium.ender_flicker.page1=#5Ender Flickers#0 are found in the end. Occasionally, a teleporting Enderman can open a rift large enough for Ender Flickers to slip through.
+compendium.flickers.page1=Светлячки представляют собой уменьшенные версии элементалей из различных элементарных измерений, пришедшие в наш мир. Их магическая связь незначительна и они способны телепортироваться туда и обратно между своим и нашим измерениями. Вся #5Автоматизация Ars Magica#0 начинается именно с них. !d Светлячки робкие по своей природе и очень быстро телепортируются в свое измерение, если чуют угрозу или их атакуют.  Светлячков можно приманить небольшим, но продолжительным количеством магии, уменьшив вероятность побега. #5Светлячков можно захватить при помощи банки для светлячка#0.
+compendium.flickers.page2=Для каждой стихии есть свой тип светлячка. Светлячки различных стихий ведут себя по-разному. Например, воздушные светлячки предпочитают держаться высоко над землей, в то время как земляные светлячки предпочитают оставаться внизу. !d Светлячки различных стихий встречаются вблизи биомов, которые ассоциируются с их стихией.
+compendium.water_flicker.page1=#5Водные светлячки#0 встречаются в биомах с преобладанием воды. Например, болото, река, океан.
+compendium.air_flicker.page1=#5Воздушные светлячки#0 встречаются где угодно над землей (~25 блоков над поверхностью).
+compendium.earth_flicker.page1=#5Земляные светлячки#0 встречаются где угодно, но предпочитают подземелье. Они располагаются близко к земле.
+compendium.fire_flicker.page1=#5Огненные светлячки#0 встречаются в нижнем мире..
+compendium.lightning_flicker.page1=#5Светлячков молний#0 можно найти на пляжах и над океанами в небе, где любят формироваться бури. Во время шторма они встречаются где угодно.
+compendium.nature_flicker.page1=#5Природные светлячки#0 встречаются в лесах.
+compendium.ice_flicker.page1=#5Ледяные светлячки#0 располагаются в замороженных биомах. Например, тайга.
+compendium.arcane_flicker.page1=#5Магических светлячков#0 можно найти в магических биомах. Они очень любят Witchwood forest (магический лес ArsMagica).
+compendium.life_flicker.page1=#5Светлячки жизни#0 встречаются где угодно. У любого светлячка есть вероятность при спауне стать светлячком жизни вместо своей оригинальной стихии.
+compendium.ender_flicker.page1=#5Светлячки края#0 встречаются в краю. Иногда телепортирующийся эндермен может открыть достаточно большую дыру в пространстве для проскальзывания светлячков края.
 #endregion
 
 #region Bosses
