@@ -1,5 +1,7 @@
 Ars Magica 2 - Reborn 1.10.2
 ========
+(This is a fork from Growlith1223's repository & merged with EdwinMindcraft's repository)
+
 [![Build Status](https://travis-ci.org/EdwinMindcraft/ArsMagica2.svg?branch=1.10.2)](https://travis-ci.org/EdwinMindcraft/ArsMagica2)
 
 This is a reworked version of the Ars Magica 2 mod by Mithion.
