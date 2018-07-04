@@ -4,13 +4,12 @@ import java.io.File;
 
 import am2.api.ArsMagicaAPI;
 import am2.api.affinity.Affinity;
-import am2.commands.CommandArsMagica;
-import am2.config.AMConfig;
-import am2.config.SpellPartConfiguration;
-import am2.extensions.DataDefinitions;
-import am2.packet.MessageBoolean;
-import am2.packet.MessageCapabilities;
-import am2.proxy.CommonProxy;
+import am2.common.CommonProxy;
+import am2.common.commands.CommandArsMagica;
+import am2.common.config.AMConfig;
+import am2.common.config.SpellPartConfiguration;
+import am2.common.packet.MessageBoolean;
+import am2.common.packet.MessageCapabilities;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -26,15 +25,15 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
 
-@Mod(modid=ArsMagica2.MODID, version=ArsMagica2.VERSION, guiFactory=ArsMagica2.GUIFACTORY, canBeDeactivated=false)
+@Mod(modid=ArsMagica2.MODID, version=ArsMagica2.VERSION, guiFactory=ArsMagica2.GUIFACTORY, canBeDeactivated=false, acceptedMinecraftVersions = "[1.10.2,1.11)")
 public class ArsMagica2 {
 	
 	public static final String MODID = "arsmagica2";
 	public static final String VERSION = "GRADLE:VERSION" + "GRADLE:BUILD";
-	public static final String GUIFACTORY = "am2.config.AMGuiFactory";
+	public static final String GUIFACTORY = "am2.client.config.AMGuiFactory";
 	public static SimpleNetworkWrapper network;
 	
-	@SidedProxy(clientSide="am2.proxy.ClientProxy", serverSide="am2.proxy.CommonProxy", modId=MODID)
+	@SidedProxy(clientSide="am2.client.ClientProxy", serverSide="am2.common.CommonProxy", modId=MODID)
 	public static CommonProxy proxy;
 	
 	@Instance(MODID)
@@ -44,7 +43,6 @@ public class ArsMagica2 {
 	private File configDir;
 	
 	static {
-		new DataDefinitions();
 		new ArsMagicaAPI();
 		Affinity.registerAffinities();
 		if (!FluidRegistry.isUniversalBucketEnabled())

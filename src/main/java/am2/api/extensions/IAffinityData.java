@@ -14,8 +14,8 @@ import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.Capability.IStorage;
 import am2.api.affinity.Affinity;
-import am2.extensions.AffinityData;
-import am2.utils.NBTUtils;
+import am2.common.extensions.AffinityData;
+import am2.common.utils.NBTUtils;
 
 public interface IAffinityData {	
 
@@ -25,7 +25,7 @@ public interface IAffinityData {
 	
 	public HashMap<Affinity, Double> getAffinities();
 
-	public void init(EntityPlayer entity, IDataSyncExtension ext);
+	public void init(EntityPlayer entity);
 	
 	public static class Storage implements IStorage<IAffinityData> {
 		
@@ -127,4 +127,11 @@ public interface IAffinityData {
 	public void setLocked(boolean b);
 
 	public boolean isLocked();
+
+	byte[] generateUpdatePacket();
+
+	void handleUpdatePacket(byte[] bytes);
+	
+	boolean shouldUpdate();
+	public void forceUpdate();
 }

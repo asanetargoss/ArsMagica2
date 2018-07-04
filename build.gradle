@@ -16,9 +16,9 @@ buildscript {
     }
 }
 repositories {
-  maven {
-    url "http://dvs1.progwml6.com/files/maven"
-  }
+    maven {
+        url = "http://dvs1.progwml6.com/files/maven"
+    }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
@@ -46,7 +46,7 @@ minecraft {
 
 jar {
 	manifest {
-		attributes 'FMLCorePlugin' : 'am2.asm.Preloader'
+		attributes 'FMLCorePlugin' : 'am2.common.asm.Preloader'
 		attributes 'FMLCorePluginContainsFMLMod' : 'true'
 	}
 }
@@ -89,10 +89,12 @@ processResources
     }
 }
 
-task incrementBuildNumber(dependsOn: 'reobfJar') << {
-	config.build_number = (config.build_number.toString().toInteger()) + 1
-	configFile.withWriter {
-		config.toProperties().store(it, "")
+task incrementBuildNumber(dependsOn: 'reobfJar') {
+	doLast {
+		config.build_number = (config.build_number.toString().toInteger()) + 1
+		configFile.withWriter {
+			config.toProperties().store(it, "")
+		}
 	}
 }
 
@@ -105,7 +107,7 @@ def parseConfig(File config) {
 }
 
 jar {
-	archiveName = "${baseName}-${config.mcversion}-${version}.jar"
+	archiveName = "${baseName}-${version}.jar"
 }
 
 defaultTasks 'clean', 'build', 'incrementBuildNumber'

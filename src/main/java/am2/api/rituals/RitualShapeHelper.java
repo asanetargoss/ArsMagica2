@@ -8,11 +8,13 @@ import java.util.List;
 
 import com.google.common.collect.Lists;
 
-import am2.LogHelper;
+import am2.api.blocks.IMultiblock;
+import am2.api.blocks.IMultiblockGroup;
+import am2.api.blocks.Multiblock;
 import am2.api.blocks.MultiblockGroup;
-import am2.api.blocks.MultiblockStructureDefinition;
 import am2.api.blocks.TypedMultiblockGroup;
-import am2.defs.BlockDefs;
+import am2.common.LogHelper;
+import am2.common.defs.BlockDefs;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.init.Blocks;
@@ -26,17 +28,17 @@ public class RitualShapeHelper {
 	
 	public static final RitualShapeHelper instance = new RitualShapeHelper();
 	
-	public MultiblockStructureDefinition corruption = new MultiblockStructureDefinition("corruption");
-	public MultiblockStructureDefinition purification = new MultiblockStructureDefinition("purification");
-	public MultiblockStructureDefinition hourglass = new MultiblockStructureDefinition("hourglass");
-	public MultiblockStructureDefinition ringedCross = new MultiblockStructureDefinition("ringedCross");
+	public IMultiblock corruption = new Multiblock("corruption");
+	public IMultiblock purification = new Multiblock("purification");
+	public IMultiblock hourglass = new Multiblock("hourglass");
+	public IMultiblock ringedCross = new Multiblock("ringedCross");
 	
 	public boolean matchesRitual(IRitualInteraction ritual, World world, BlockPos pos) {
-		List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius()));
+		List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius()));
 		if (!ritual.getRitualShape().matches(world, pos)) {
 			return false;
 		}
-		for (ItemStack stack : ritual.getReagents()) {
+		for (ItemStack stack : ritual.getRitualReagents()) {
 			boolean matches = false;
 			for (EntityItem item : items) {
 				ItemStack is = item.getEntityItem();
@@ -50,7 +52,7 @@ public class RitualShapeHelper {
 	}
 	
 	public ItemStack[] checkForRitual(IRitualInteraction ritual, World world, BlockPos pos){
-		ArrayList<EntityItem> items = (ArrayList<EntityItem>)world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius()));
+		ArrayList<EntityItem> items = (ArrayList<EntityItem>)world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius()));
 		Collections.sort(items, new EntityItemComparator());
 		ItemStack[] toReturn = new ItemStack[items.size()];
 		for (int i = 0; i < items.size(); ++i)
@@ -60,8 +62,8 @@ public class RitualShapeHelper {
 	}
 	
 	public void consumeReagents(IRitualInteraction ritual, World world, BlockPos pos) {
-		List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius(), ritual.getReagentSearchRadius()));
-		for (ItemStack stack : ritual.getReagents()) {
+		List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius(), ritual.getRitualReagentSearchRadius()));
+		for (ItemStack stack : ritual.getRitualReagents()) {
 			for (EntityItem item : items) {
 				ItemStack is = item.getEntityItem();
 				if (is.getItem().equals(stack.getItem()) && is.getMetadata() == stack.getMetadata() && is.stackSize >= stack.stackSize) {
@@ -76,7 +78,7 @@ public class RitualShapeHelper {
 	}
 	
 	public void consumeAllReagents(IRitualInteraction interaction, World world, BlockPos pos){
-		int r = interaction.getReagentSearchRadius();
+		int r = interaction.getRitualReagentSearchRadius();
 		List<EntityItem> items = world.getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(pos, pos.add(1, 1, 1)).expand(r, r, r));
 		for (EntityItem item : items) {
 			LogHelper.debug("Removing Item %s", item.getEntityItem().toString());
@@ -85,7 +87,7 @@ public class RitualShapeHelper {
 	}
 	
 	public void consumeShape(IRitualInteraction ritual, World world, BlockPos pos) {
-		for (MultiblockGroup group : ritual.getRitualShape().getMatchingGroups(world, pos)) {
+		for (IMultiblockGroup group : ritual.getRitualShape().getMatchingGroups(world, pos)) {
 			for (BlockPos blockPos : group.getPositions()) {
 				IBlockState state = world.getBlockState(pos.add(blockPos));
 				world.setBlockToAir(pos.add(blockPos));

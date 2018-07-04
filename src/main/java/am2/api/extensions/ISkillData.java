@@ -14,8 +14,8 @@ import net.minecraftforge.common.capabilities.Capability.IStorage;
 import am2.api.SkillPointRegistry;
 import am2.api.skill.Skill;
 import am2.api.skill.SkillPoint;
-import am2.extensions.SkillData;
-import am2.utils.NBTUtils;
+import am2.common.extensions.SkillData;
+import am2.common.utils.NBTUtils;
 
 public interface ISkillData {
 	
@@ -32,7 +32,11 @@ public interface ISkillData {
 	public void setSkillPoint(SkillPoint point, int num);
 
 	public boolean canLearn(String name);
-	
+	public boolean shouldUpdate();
+	public byte[] generateUpdatePacket();
+	public void handleUpdatePacket(byte[] bytes);
+	public void forceUpdate();
+
 	
 	public static class Storage implements IStorage<ISkillData> {
 		

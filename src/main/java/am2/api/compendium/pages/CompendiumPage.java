@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Map.Entry;
 
 import am2.api.ArsMagicaAPI;
-import am2.api.blocks.MultiblockStructureDefinition;
+import am2.api.blocks.IMultiblock;
 import am2.api.compendium.wrapper.StackMapWrapper;
 import am2.api.rituals.IRitualInteraction;
 import am2.api.skill.Skill;
 import am2.api.spell.AbstractSpellPart;
-import am2.defs.ItemDefs;
-import am2.power.PowerTypes;
+import am2.common.defs.ItemDefs;
+import am2.common.power.PowerTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiButton;
@@ -25,15 +25,14 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.VertexBuffer;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@SuppressWarnings("deprecation")
 @SideOnly(Side.CLIENT)
 public abstract class CompendiumPage<E> {
 	
@@ -44,7 +43,7 @@ public abstract class CompendiumPage<E> {
 		registerPageType(PageText.class, String.class);
 		registerPageType(PageSpellComponent.class, AbstractSpellPart.class);
 		registerPageType(PageStackMap.class, StackMapWrapper.class);
-		registerPageType(PageMultiblock.class, MultiblockStructureDefinition.class);
+		registerPageType(PageMultiblock.class, IMultiblock.class);
 		registerPageType(PageRitual.class, IRitualInteraction.Wrapper.class);
 		registerPageType(PageSkill.class, Skill.class);
 		registerPageType(PageEntity.class, Entity.class);
@@ -198,15 +197,15 @@ public abstract class CompendiumPage<E> {
 					list.add(skill.getName());
 				}else if (stack.getItem() == ItemDefs.etherium){
 					list.clear();
-					list.add(stack.stackSize + " " + I18n.translateToLocal("item.arsmagica2:etherium.name"));
+					list.add(stack.stackSize + " " + I18n.format("item.arsmagica2:etherium.name"));
 					ArrayList<String> subList = new ArrayList<>();
 					for (PowerTypes type : PowerTypes.all()) {
 						if ((stack.getItemDamage() & type.ID()) == type.ID()) {
-							subList.add(type.getChatColor() + I18n.translateToLocal("etherium." + type.name() + ".name"));
+							subList.add(type.getChatColor() + I18n.format("etherium." + type.name() + ".name"));
 						}
 					}
 					if (subList.size() == PowerTypes.all().size()) {
-						list.add(TextFormatting.GRAY.toString() + I18n.translateToLocal("etherium.any.name"));
+						list.add(TextFormatting.GRAY.toString() + I18n.format("etherium.any.name"));
 					} else {
 						list.addAll(subList);
 					}

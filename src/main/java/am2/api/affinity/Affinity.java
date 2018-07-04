@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 import am2.api.ArsMagicaAPI;
-import am2.utils.NBTUtils;
+import am2.common.utils.NBTUtils;
+import net.minecraft.client.resources.I18n;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.translation.I18n;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.IForgeRegistryEntry;
 
@@ -22,7 +22,6 @@ import net.minecraftforge.fml.common.registry.IForgeRegistryEntry;
  * @author EdwinMindcraft
  *
  */
-@SuppressWarnings("deprecation")
 public class Affinity extends IForgeRegistryEntry.Impl<Affinity> implements Comparable<Affinity>{
 	
 	private static final ResourceLocation NONE_LOC = new ResourceLocation("arsmagica2", "none");
@@ -127,7 +126,7 @@ public class Affinity extends IForgeRegistryEntry.Impl<Affinity> implements Comp
 	 * @return the localized name of the affinity
 	 */
 	public String getLocalizedName() {
-		return I18n.translateToLocal(getUnlocalisedName());
+		return I18n.format(getUnlocalisedName());
 	}
 	/**
 	 * 
@@ -184,6 +183,7 @@ public class Affinity extends IForgeRegistryEntry.Impl<Affinity> implements Comp
 		return 0.0F;
 	}
 
+	@Override
 	public int compareTo(Affinity b) {
 		return ArsMagicaAPI.getAffinityRegistry().getId(b) - ArsMagicaAPI.getAffinityRegistry().getId(this);
 	}
@@ -239,13 +239,17 @@ public class Affinity extends IForgeRegistryEntry.Impl<Affinity> implements Comp
 			minorOpposites.add(rl);
 		return this;
 	}
-	
-	public static class AffinityComparator implements Comparator<Affinity> {
 
-		@Override
-		public int compare(Affinity o1, Affinity o2) {
-			return o1.compareTo(o2);
-		}
-		
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Affinity)
+			return ((Affinity) obj).delegate.equals(this.delegate);
+		else
+			return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return this.getRegistryName().hashCode();
 	}
 }

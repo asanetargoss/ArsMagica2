@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 import am2.api.event.SpellCastEvent;
 import am2.api.extensions.IAffinityData;
-import am2.extensions.AffinityData;
+import am2.common.extensions.AffinityData;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -98,30 +98,8 @@ public abstract class AbstractAffinityAbility extends IForgeRegistryEntry.Impl<A
 	public void applyJump(EntityPlayer player, LivingJumpEvent event) {}
 	
 	public void removeEffects(EntityPlayer player) {}
-	/**
-	 * For internal use
-	 */
-	public Runnable createRunnable(EntityPlayer player) {
-		return new Apply(player, this);
-	}
 	
 	public boolean hasMax() {
 		return getMaximumDepth() >= 0F && getMaximumDepth() <= 1F && getMaximumDepth() > getMinimumDepth();
-	}
-	
-	private static class Apply implements Runnable {
-		
-		private EntityPlayer player;
-		private AbstractAffinityAbility ability;
-		
-		public Apply(EntityPlayer player, AbstractAffinityAbility ability) {
-			this.player = player;
-			this.ability = ability;
-		}
-		
-		@Override
-		public void run() {
-			ability.applyKeyPress(player);
-		}
 	}
 }
