@@ -30,6 +30,7 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import scala.actors.threadpool.Arrays;
 
 public class PlayerTracker{
+	public static boolean AAL_LIST_ENABLED = false;
 
 	public static HashMap<UUID, HashMap<Integer, ItemStack>> soulbound_Storage;
 
@@ -183,43 +184,57 @@ public class PlayerTracker{
 	}
 
 	private void populateAALList(){
-
-		aals = new TreeMap<String, Integer>();
-		clls = new TreeMap<String, String>();
-		cldm = new TreeMap<String, Integer>();
-
-		String dls = "http://qorconcept.com/mc/AREW0152.txt";
-		char[] dl = dls.toCharArray();
-		
-		
-		try{
-			String s = WebRequestUtils.sendPost(new String(dl), new HashMap<String, String>());
-			@SuppressWarnings("unchecked")
-			ArrayList<String> lines = new ArrayList<String>(Arrays.asList(s.replace("\r\n", "\n").split("\n")));
-			addContributors(lines);
-			for (String line : lines){
-				
-				String[] split = line.split(",");
-				for (int i = 1; i < split.length; ++i){
-					if (split[i].equals(":AL")){
-						try{
-							aals.put(split[0].toLowerCase(), Integer.parseInt(split[i+1]));
-						}catch(Throwable t){
-							
-						}
-					}else if (split[i].equals(":CL")){
-						try{
-							clls.put(split[0].toLowerCase(), split[i+1]);
-							cldm.put(split[0].toLowerCase(), Integer.parseInt(split[i+2]));
-						}catch(Throwable t){
-							
-						}
-					}
-				}
-			}
-		}catch (Throwable t){
-			//well, we tried.
+		if (!AAL_LIST_ENABLED){
+			return;
 		}
+
+	    Runnable populateAATask = () -> {
+	        TreeMap<String, Integer> aals = new TreeMap<>();
+	        TreeMap<String, String> clls = new TreeMap<>();
+	        TreeMap<String, Integer> cldm = new TreeMap<>();
+	        
+	        ArrayList<String> lines = new ArrayList<String>();
+
+	        String dls = "http://qorconcept.com/mc/AREW0152.txt";
+	        char[] dl = dls.toCharArray();
+	        try{
+	            String s = WebRequestUtils.sendPost(new String(dl), new HashMap<String, String>());
+	            for (String line : s.replace("\r\n", "\n").split("\n")) {
+	                lines.add(line);
+	            }
+	        }catch (Throwable t){
+	            //well, we tried.
+	        }
+	        
+	        addContributors(lines);
+	        
+	        for (String line : lines){
+	            String[] split = line.split(",");
+	            for (int i = 1; i < split.length; ++i){
+	                if (split[i].equals(":AL")){
+	                    try{
+	                        aals.put(split[0].toLowerCase(), Integer.parseInt(split[i+1]));
+	                    }catch(Throwable t){
+	                        
+	                    }
+	                }else if (split[i].equals(":CL")){
+	                    try{
+	                        clls.put(split[0].toLowerCase(), split[i+1]);
+	                        cldm.put(split[0].toLowerCase(), Integer.parseInt(split[i+2]));
+	                    }catch(Throwable t){
+	                        
+	                    }
+	                }
+	            }
+	        }
+
+	        this.aals = aals;
+	        this.clls = clls;
+	        this.cldm = cldm;
+	    };
+	    
+	    Thread populateAAThread = new Thread(populateAATask, "AM2-populateAAList");
+	    populateAAThread.start();
 	}
 
 	public String getCLF(String uuid){
