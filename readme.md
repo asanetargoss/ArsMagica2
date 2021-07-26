@@ -1,14 +1,19 @@
-Ars Magica 2 - Reborn 1.10.2
+Ars Magica 2 - Hardcore Alchemy Edition
 ========
 
-This is a reworked version of the Ars Magica 2 mod by Mithion.
+Yo dawg, this is a fork of the Hermitian spellcasting mod, Ars Magica 2, for Minecraft 1.10.2.
 
+You're probably wondering: who made this mod? Here's the dealio:
 
+- Mithion was the original author of Ars Magica 2. There were also other contributors to the mod. People enjoyed the mod.
+- EdwinMindcraft forked the mod, and ported it to 1.10.2. Some commit history was lost.
+- Growlith forked the fork, and made further fixes. Ars Magica 2 was released on Curseforge. It was (and still is) in a beta state compared to its 1.7.10 predecessor, but people enjoyed it nonetheless.
+- This here repository is a fork of Growlith's fork, inheriting a few changes that didn't get released on Curseforge.
+- At some point EdwinMindcraft went their own way and made a bunch of fixes and overhauled some mechanics. It sounds potentially interesting! But also nontrivial to upgrade to, and with other unknowns, so this fork does not include their newer changes.
 
-## Useful Links
-* [Homepage](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1292222)
-* [Unofficial Wiki](http://am2.wikia.com/wiki/Ars_Magica_2_Wiki)
-* [How to Report a Bug Properly](http://pastebin.com/29r0Nhe0)
+Overall: If you are using the latest version of Ars Magica 2 from Curseforge for 1.10.2 (1.5.0-18), this fork is (probably) (hopefully) a safe way to upgrade to a newer version with a few more fixes.
+
+In the future, the scope of changes to this mod may (or may not) increase as needed to accommodate the Hardcore Alchemy modpack.
 
 ## Currently in the API
 
@@ -23,7 +28,7 @@ This is a reworked version of the Ars Magica 2 mod by Mithion.
  * Rituals
  
 ## The Compendium Update
-The compendium is getting entirely reworked in a way that you'll need to add Entries in a different way that you previously did. Though this will allow you to have more that one kind of right page. For example you can check am2.defs.LoreDefs which contains all the pages definition.
+The compendium has been reworked in a way that you'll need to add Entries in a different way than in 1.7.10. Though this will allow you to have more that one kind of right page. For example you can check am2.defs.LoreDefs which contains all the pages definition.
  
 
 
