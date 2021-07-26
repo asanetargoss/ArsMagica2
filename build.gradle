@@ -29,7 +29,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 ext.configFile = file('build.properties')
 ext.config = parseConfig(configFile)
 
-version = "${config.version}-${config.build_number}"
+version = "${config.version}"
 group= "am2" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ArsMagica2"
 
@@ -37,7 +37,6 @@ archivesBaseName = "ArsMagica2"
 minecraft {
     version = "1.10.2-12.18.3.2185"
     runDir = "run"
-    replace 'GRADLE:BUILD', config.build_number
     replace 'GRADLE:VERSION', config.version
     replaceIn 'ArsMagica2.java'
 	//replace '${version}', project.version
@@ -89,13 +88,6 @@ processResources
     }
 }
 
-task incrementBuildNumber(dependsOn: 'reobfJar') << {
-	config.build_number = (config.build_number.toString().toInteger()) + 1
-	configFile.withWriter {
-		config.toProperties().store(it, "")
-	}
-}
-
 def parseConfig(File config) {
 	config.withReader {
 		def prop = new Properties()
@@ -108,4 +100,4 @@ jar {
 	archiveName = "${baseName}-${config.mcversion}-${version}.jar"
 }
 
-defaultTasks 'clean', 'build', 'incrementBuildNumber'
+defaultTasks 'clean', 'build'
