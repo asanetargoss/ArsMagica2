@@ -30,6 +30,7 @@ import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import scala.actors.threadpool.Arrays;
 
 public class PlayerTracker{
+	public static boolean AAL_LIST_ENABLED = false;
 
 	public static HashMap<UUID, HashMap<Integer, ItemStack>> soulbound_Storage;
 
@@ -183,6 +184,10 @@ public class PlayerTracker{
 	}
 
 	private void populateAALList(){
+		if (!AAL_LIST_ENABLED){
+			return;
+		}
+
 	    Runnable populateAATask = () -> {
 	        TreeMap<String, Integer> aals = new TreeMap<>();
 	        TreeMap<String, String> clls = new TreeMap<>();
